@@ -1,14 +1,16 @@
+
 let distort;
 
 function setup() {
-    distort = new Tone.Distortion(1.8).toMaster();
+    
+    distort = new Tone.Distortion(1.8).toDestination();
     bg = loadImage('waterBg.jpg');
     createCanvas(windowWidth, windowHeight);
    
-    sound1 = new Tone.Player("PouringWater.mp3").toMaster();
-    sound2 = new Tone.Player("Rain.mp3").toMaster();
-    sound3 = new Tone.Player("RunningWater.mp3").toMaster();
-    sound4 = new Tone.Player("Water.mp3").toMaster();
+    sound1 = new Tone.Player("PouringWater.mp3").toDestination();
+    sound2 = new Tone.Player("Rain.mp3").toDestination();
+    sound3 = new Tone.Player("RunningWater.mp3").toDestination();
+    sound4 = new Tone.Player("Water.mp3").toDestination();
 
     button1 = createButton("Pouring Water");
     button1.position(50, 100);
